@@ -1,0 +1,190 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+   
+}
+
+body {
+    background-color: lightgray;
+    margin: 0 auto;
+    width: 1100px;
+    font-family: "GothicRus Condenced Medium";
+    font-size: 21px;
+}
+option{
+        background-image: url('/Content/Images/BackgroundLbl.png');
+}
+ListItem{
+    background-color: khaki;
+}
+.NameDev{
+    font-family: "GothicRus Condenced Medium";
+    font-size: 28px;
+    display:block;
+    float:none;
+    margin: 5px auto;
+    text-align: center;
+}
+.StrDev{
+    font-size: 22px;
+}
+#addDevicesButton {
+    font-family: "GothicRus Condenced Medium";
+    font-size: 25px;
+}
+#headerLine{
+    text-align: center;
+}
+#dropDownDevicesList{
+    font-family: "GothicRus Condenced Medium";
+    font-size: 25px;
+    background-image: url('/Content/Images/BackgroundLbl.png');
+}
+devBody{
+    background-color: khaki;
+}
+.device-div{
+        display: block;
+    float: left;
+    margin: 3px;
+	margin-top:10px;
+    padding: 3px;
+	width: 350px;
+    height: 420px;
+	background-image: url('/Content/Images/BackgrounDev.png');
+	border-radius:10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+    border: 1px solid;
+    		font-family: "GothicRus Condenced Medium";
+     font-size: 20px;
+    
+}
+#deviceType{
+    font-family: "GothicRus Condenced Medium";
+    font-size: 25px;
+    background-image: url('/Content/Images/BackgroundLbl.png');
+    }
+
+.lbl {
+    width: 102px;
+    height: 37px;
+    margin: 5px;
+}
+
+
+.lblCenter {
+    width: 102px;
+    height: 37px;
+    margin: 5px auto;
+        display: block;
+    text-align: center;
+}
+.lblOC{
+    
+    margin: 5px auto;
+        display: block;
+    text-align: center;
+}
+
+.switchOn {
+    width: 90px;
+    height: 30px;
+    margin: 4px auto;
+    display: block;
+    text-align: center;
+    background-image: url('/Content/Images/statusDeviceOn.png');
+}
+
+.switchOff {
+            background-image: url('/Content/Images/statusDeviceOff.png');
+            width: 90px;
+    height: 30px;
+    margin: 4px auto;
+    display: block;
+    text-align: center;
+}
+
+.leftBt {
+    width: 28px;
+    height: 29px;
+    margin: 4px auto;
+}
+
+.rightBt {
+    width: 28px;
+    height: 29px;
+    margin: 4px auto;
+}
+
+.switchOpen {
+    width: 90px;
+    height: 30px;
+    margin: 4px auto;
+    text-align: center;
+}
+
+.switchClose {
+    width: 90px;
+    height: 30px;
+    margin: 4px auto;
+    text-align: center;
+}
+.reset {
+    width: 115px;
+    height: 33px;
+    margin: 4px auto;
+    padding: 4px;
+}
+.btbQuick {
+    width: 115px;
+    height: 33px;
+    margin: 4px auto;
+    padding: 4px;
+}
+
+.btbBoost {
+    width: 115px;
+    height: 33px;
+    margin: 4px auto;
+    padding: 4px;
+}
+
+.btbUnh {
+    width: 115px;
+    height: 33px;
+    margin: 4px auto;
+    padding: 4px;
+}
+
+.btbLow {
+    width: 115px;
+    height: 33px;
+    margin: 4px auto;
+    padding: 4px;
+}
+.btbUseDev {
+    width: 115px;
+    height: 33px;
+    margin: 4px auto;
+    padding: 4px;
+    text-align: center;
+    display: block;
+}
+.btbDelete {
+    width: 115px;
+    height: 33px;
+    margin: 4px auto;
+    padding: 4px;
+    text-align: center;
+    display: block;
+}
+#logo{
+    width: 312px;
+    height: 66px;
+        margin: 10px auto;
+    padding: 4px;
+    text-align: center;
+    display: block;
+}
