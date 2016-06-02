@@ -34,4 +34,3 @@ E:\!SmartHouse\EF\EntityFramework And WebAPI\EntityFramework And WebAPI\bin\Syst
 E:\!SmartHouse\EF\EntityFramework And WebAPI\EntityFramework And WebAPI\bin\Antlr3.Runtime.pdb
 E:\!SmartHouse\EF\EntityFramework And WebAPI\EntityFramework And WebAPI\obj\Debug\EntityFramework And WebAPI.dll
 E:\!SmartHouse\EF\EntityFramework And WebAPI\EntityFramework And WebAPI\obj\Debug\EntityFramework And WebAPI.pdb
-E:\!SmartHouse\EF\EntityFramework And WebAPI\EntityFramework And WebAPI\obj\Debug\EntityFramework And WebAPI.csprojResolveAssemblyReference.cache

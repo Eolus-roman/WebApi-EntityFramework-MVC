@@ -14,9 +14,9 @@
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
     <link href="~/Content/Style.css" rel="stylesheet" />
-    <script src="~/Scripts/AjaxScripts/DevButt.js"></script>
-    <script src="~/Scripts/jquery-1.10.2.js"></script>
-
+    <script src="~/Scripts/jquery-2.2.3.js"></script>
+    <script src="~/Scripts/DevButt.js"></script>
+    
 </head>
 <body>
     <header>
@@ -35,11 +35,38 @@
                 @foreach (var item in Model)
                 {
                     <div class="device-div">
+                        @if (item is IFridgeMark)
+                        {
+                            <input type="hidden" name="FRKey" id="@item.Id-FRKey" value="@item.Id">
+                        }
                         <label class="NameDev">@item.Name</label>
-                        <p class="StrDev">@item.ToString()</p>
+                       
+                        <p class="StrDev" id="@item.Id-status">@item.ToString()</p>
                         @if (item.Status == false)
                         {
-                            <a class="switchOff" href="/Home/Operation/@item.Type/@item.Id/on"><img src="~/Content/Images/statusDeviceOff.png" /></a>
+                            if (item is IFridgeMark)
+                            {
+
+                                <button class="switchOff" id="@item.Id-onFr"><img src="~/Content/Images/statusDeviceOff.png" /></button>
+
+                                @*<a class="switchOff" href="/Home/Operation/@item.Type/@item.Id/on"><img src="~/Content/Images/statusDeviceOff.png" /></a>*@
+                            }
+                            if (item is IHooverMark)
+                            {
+                                <a class="switchOff" href="/Home/Operation/@item.Type/@item.Id/on"><img src="~/Content/Images/statusDeviceOff.png" /></a>
+                            }
+                            if (item is IBicycleMark)
+                            {
+                                <a class="switchOff" href="/Home/Operation/@item.Type/@item.Id/on"><img src="~/Content/Images/statusDeviceOff.png" /></a>
+                            }
+                            if (item is ITelevisionMark)
+                            {
+                                <a class="switchOff" href="/Home/Operation/@item.Type/@item.Id/on"><img src="~/Content/Images/statusDeviceOff.png" /></a>
+                            }
+                            if (item is IWarhammerMark)
+                            {
+                                <a class="switchOff" href="/Home/Operation/@item.Type/@item.Id/on"><img src="~/Content/Images/statusDeviceOff.png" /></a>
+                            }
                         }
                         @if (item.Status == true)
                         {
@@ -135,7 +162,15 @@
                         }
                         @*=====================================*@
                         <a class="btbDelete" href="/Home/Delete/@item.Type/@item.Id"><img src="~/Content/Images/Delete.png" /></a>
+                        @if (item is IFridgeMark)
+                        {
+                        <script>
+                            var key = $("#@item.Id-FRKey").val();
+                            Action(key);
+                        </script>
+                        }
                     </div>
+                   
                 }
             </div>
         </form>
