@@ -180,6 +180,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Models\Smart House.dll" />
+    <Content Include="Scripts\ButtClick.js" />
     <Content Include="Scripts\DevButt.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

@@ -14,9 +14,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
     <link href="~/Content/Style.css" rel="stylesheet" />
-    <script src="~/Scripts/jquery-2.2.3.js"></script>
     <script src="~/Scripts/DevButt.js"></script>
-    
+    <script src="~/Scripts/jquery-2.2.3.min.js"></script>
 </head>
 <body>
     <header>
@@ -34,20 +33,20 @@
             <div class="devicePanel" id="devicePanel">
                 @foreach (var item in Model)
                 {
-                    <div class="device-div">
-                        @if (item is IFridgeMark)
-                        {
-                            <input type="hidden" name="FRKey" id="@item.Id-FRKey" value="@item.Id">
-                        }
+                    <div class="device-div" id="devicePanel">
+
                         <label class="NameDev">@item.Name</label>
-                       
-                        <p class="StrDev" id="@item.Id-status">@item.ToString()</p>
+
+
+                        <p class="StrDev" id="status-@item.Id">@item.ToString()</p>
                         @if (item.Status == false)
                         {
                             if (item is IFridgeMark)
                             {
 
-                                <button class="switchOff" id="@item.Id-onFr"><img src="~/Content/Images/statusDeviceOff.png" /></button>
+                                @*<button class="switchOff" id="@item.Id-onFr"><img src="~/Content/Images/statusDeviceOff.png" /></button>*@
+                                <input type="button" class="switchOffFr" id="@item.Id" devtype="@item.Type" value="вкл" />
+                                <br />
 
                                 @*<a class="switchOff" href="/Home/Operation/@item.Type/@item.Id/on"><img src="~/Content/Images/statusDeviceOff.png" /></a>*@
                             }
@@ -70,8 +69,17 @@
                         }
                         @if (item.Status == true)
                         {
-                            <a class="switchOn" href="/Home/Operation/@item.Type/@item.Id/off"><img src="~/Content/Images/statusDeviceOn.png" /></a>
+                            if (item is IFridgeMark)
+                            {
+                                <input type="button" class="switchOnFr" id="@item.Id" devtype="@item.Type" value="выкл" />
+                                <br />
+                            }
+                            else
+                            {
+                                <a class="switchOn" href="/Home/Operation/@item.Type/@item.Id/off"><img src="~/Content/Images/statusDeviceOn.png" /></a>
+                            }
                         }
+                        
                         @*=====================================*@
                         @if (item is IChangeEnum)
                         {
@@ -162,19 +170,14 @@
                         }
                         @*=====================================*@
                         <a class="btbDelete" href="/Home/Delete/@item.Type/@item.Id"><img src="~/Content/Images/Delete.png" /></a>
-                        @if (item is IFridgeMark)
-                        {
-                        <script>
-                            var key = $("#@item.Id-FRKey").val();
-                            Action(key);
-                        </script>
-                        }
+
                     </div>
-                   
+
                 }
             </div>
         </form>
     }
-
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/btnEvets")
 </body>
 </html>

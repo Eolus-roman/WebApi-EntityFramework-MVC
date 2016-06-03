@@ -23,6 +23,8 @@ namespace EntityFramework_And_WebAPI
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            bundles.Add(new ScriptBundle("~/bundles/btnEvets").Include(
+                              "~/Scripts/ButtClick.js"));
         }
     }
 }

@@ -15,14 +15,15 @@ namespace EntityFramework_And_WebAPI.Controllers
         // api/fridge
     
         // PUT api/fridge/5
-        [Route("api/fridge/{button}/{id}")]
-        public string Put(int id, string button)
+        [Route("api/fridge/{command}/{id}")]
+        public string Get(string command,  int id)
         {
             Device dev = db.Fridges.Find(id);
+            
             if (dev != null)
             {
 
-                switch (button)
+                switch (command)
                 {
                     case "on":
                         dev.On();
@@ -45,5 +46,6 @@ namespace EntityFramework_And_WebAPI.Controllers
             }
             base.Dispose(disposing);
         }
+       
     }
 }
