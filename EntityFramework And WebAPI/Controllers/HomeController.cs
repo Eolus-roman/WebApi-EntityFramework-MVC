@@ -20,8 +20,8 @@ namespace EntityFramework_And_WebAPI.Controllers
         public ActionResult Index()
         {
             SelectListItem[] devicesList = new SelectListItem[5];
-            devicesList[0] = new SelectListItem { Text = "Fridge", Value = "FR", Selected = true };
-            devicesList[1] = new SelectListItem { Text = "Hoover", Value = "HO" };
+            devicesList[0] = new SelectListItem { Text = "Hoover", Value = "HO", Selected = true };
+            devicesList[1] = new SelectListItem { Text = "Fridge", Value = "FR" };
             devicesList[2] = new SelectListItem { Text = "Bicycle", Value = "BI" };
             devicesList[3] = new SelectListItem { Text = "Television", Value = "TV" };
             devicesList[4] = new SelectListItem { Text = "Warhammer", Value = "WH" };
@@ -33,8 +33,8 @@ namespace EntityFramework_And_WebAPI.Controllers
         }
         public static List<Device> GetDevices(DeviceContext db)
         {
-            List<Device> dev = db.Fridges.ToList().Cast<Device>().ToList();
-            dev.AddRange(db.Hoovers.ToList().Cast<Device>());
+            List<Device> dev = db.Hoovers.ToList().Cast<Device>().ToList();
+            dev.AddRange(db.Fridges.ToList().Cast<Device>().ToList());
             dev.AddRange(db.Bicycles.ToList().Cast<Device>());
             dev.AddRange(db.Televisions.ToList().Cast<Device>());
             dev.AddRange(db.Warhammers.ToList().Cast<Device>());
@@ -47,12 +47,12 @@ namespace EntityFramework_And_WebAPI.Controllers
             switch (deviceType)
             {
                 default:
-                    newDevice = Create.NewFridge();
-                    db.Fridges.Add((Fridge)newDevice);
-                    break;
-                case "HO":
                     newDevice = Create.NewHoover();
                     db.Hoovers.Add((Hoover)newDevice);
+                    break;
+                case "HO":
+                    newDevice = Create.NewFridge();
+                    db.Fridges.Add((Fridge)newDevice);
                     break;
                 case "BI":
                     newDevice = Create.NewBicycle();
@@ -88,30 +88,30 @@ namespace EntityFramework_And_WebAPI.Controllers
             }
             if (d.Type == "Fridge")
             {
-                 iooc = (IOpenOrClose)d;
-                 ice = (IChangeEnum)d;
+                iooc = (IOpenOrClose)d;
+                ice = (IChangeEnum)d;
             }
             if (d.Type == "Hoover")
             {
-                 irs = (IResetSettings)d;
-                 iu = (IUse)d;
-                 ice = (IChangeEnum)d;
+                irs = (IResetSettings)d;
+                iu = (IUse)d;
+                ice = (IChangeEnum)d;
             }
             if (d.Type == "Bicycle")
             {
-                 isp = (ISpeed)d;
-                 irs = (IResetSettings)d;
-                 ice = (IChangeEnum)d;
+                isp = (ISpeed)d;
+                irs = (IResetSettings)d;
+                ice = (IChangeEnum)d;
             }
             if (d.Type == "Television")
             {
-                 ice = (IChangeEnum)d;
-                 iv = (IVolume)d;
+                ice = (IChangeEnum)d;
+                iv = (IVolume)d;
             }
             if (d.Type == "Warhammer")
             {
-                 ice = (IChangeEnum)d;
-                 iu = (IUse)d;
+                ice = (IChangeEnum)d;
+                iu = (IUse)d;
             }
             switch (command)
             {
@@ -173,11 +173,11 @@ namespace EntityFramework_And_WebAPI.Controllers
             }
             switch (type)
             {
-                case "Fridge":
-                    db.Fridges.Remove((Fridge)d);
-                    break;
                 case "Hoover":
                     db.Hoovers.Remove((Hoover)d);
+                    break;
+                case "Fridge":
+                    db.Fridges.Remove((Fridge)d);
                     break;
                 case "Bicycle":
                     db.Bicycles.Remove((StationaryBicycle)d);
@@ -201,10 +201,10 @@ namespace EntityFramework_And_WebAPI.Controllers
             }
             switch (type)
             {
-                case "Fridge":
-                    return db.Fridges.Find(idDev);
                 case "Hoover":
                     return db.Hoovers.Find(idDev);
+                case "Fridge":
+                    return db.Fridges.Find(idDev);
                 case "Bicycle":
                     return db.Bicycles.Find(idDev);
                 case "Television":
@@ -214,7 +214,6 @@ namespace EntityFramework_And_WebAPI.Controllers
                 default:
                     return null;
             }
-
         }
     }
 

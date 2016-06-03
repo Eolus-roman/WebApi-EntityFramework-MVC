@@ -35,3 +35,40 @@ E:\!SmartHouse\EF\EntityFramework And WebAPI\EntityFramework And WebAPI\bin\Antl
 E:\!SmartHouse\EF\EntityFramework And WebAPI\EntityFramework And WebAPI\obj\Debug\EntityFramework And WebAPI.dll
 E:\!SmartHouse\EF\EntityFramework And WebAPI\EntityFramework And WebAPI\obj\Debug\EntityFramework And WebAPI.pdb
 E:\!SmartHouse\EF\EntityFramework And WebAPI\EntityFramework And WebAPI\obj\Debug\EntityFramework And WebAPI.csprojResolveAssemblyReference.cache
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\EntityFramework And WebAPI.dll.config
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\EntityFramework And WebAPI.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\EntityFramework And WebAPI.pdb
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\Antlr3.Runtime.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\EntityFramework.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\EntityFramework.SqlServer.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\Microsoft.Web.Infrastructure.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\Newtonsoft.Json.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\Smart House.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Net.Http.Formatting.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.Helpers.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.Http.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.Http.WebHost.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.Mvc.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.Optimization.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.Razor.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.WebPages.Deployment.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.WebPages.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.WebPages.Razor.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\WebGrease.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\EntityFramework.xml
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\EntityFramework.SqlServer.xml
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\Newtonsoft.Json.xml
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Net.Http.Formatting.xml
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.Helpers.xml
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.Http.xml
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.Http.WebHost.xml
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.Mvc.xml
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.Optimization.xml
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.Razor.xml
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.WebPages.xml
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.WebPages.Deployment.xml
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\System.Web.WebPages.Razor.xml
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\bin\Antlr3.Runtime.pdb
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\obj\Debug\EntityFramework And WebAPI.dll
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\obj\Debug\EntityFramework And WebAPI.pdb
+E:\!SmartHouse\EF\1\EntityFramework And WebAPI\obj\Debug\EntityFramework And WebAPI.csprojResolveAssemblyReference.cache

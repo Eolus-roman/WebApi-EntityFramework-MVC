@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     text-align: center;
-   
 }
 
 body {
@@ -12,60 +11,69 @@ body {
     font-family: "GothicRus Condenced Medium";
     font-size: 21px;
 }
-option{
-        background-image: url('/Content/Images/BackgroundLbl.png');
+
+option {
+    background-image: url('/Content/Images/BackgroundLbl.png');
 }
-ListItem{
+
+ListItem {
     background-color: khaki;
 }
-.NameDev{
+
+.NameDev {
     font-family: "GothicRus Condenced Medium";
     font-size: 28px;
-    display:block;
-    float:none;
+    display: block;
+    float: none;
     margin: 5px auto;
     text-align: center;
 }
-.StrDev{
+
+.StrDev {
     font-size: 22px;
 }
+
 #addDevicesButton {
     font-family: "GothicRus Condenced Medium";
     font-size: 25px;
 }
-#headerLine{
+
+#headerLine {
     text-align: center;
 }
-#dropDownDevicesList{
+
+#dropDownDevicesList {
     font-family: "GothicRus Condenced Medium";
     font-size: 25px;
     background-image: url('/Content/Images/BackgroundLbl.png');
 }
-devBody{
+
+devBody {
     background-color: khaki;
 }
-.device-div{
-        display: block;
+
+.device-div {
+    display: block;
     float: left;
     margin: 3px;
-	margin-top:10px;
+    margin-top: 10px;
     padding: 3px;
-	width: 350px;
+    width: 350px;
     height: 420px;
-	background-image: url('/Content/Images/BackgrounDev.png');
-	border-radius:10px;
-        -moz-border-radius: 10px;
-        -webkit-border-radius: 10px;
+    background-image: url('/Content/Images/BackgrounDev.png');
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
     border: 1px solid;
-    		font-family: "GothicRus Condenced Medium";
-     font-size: 20px;
-    
+    font-family: "GothicRus Condenced Medium";
+    font-size: 20px;
 }
-#deviceType{
+
+#deviceType {
     font-family: "GothicRus Condenced Medium";
     font-size: 25px;
     background-image: url('/Content/Images/BackgroundLbl.png');
-    }
+}
 
 .lbl {
     width: 102px;
@@ -78,13 +86,13 @@ devBody{
     width: 102px;
     height: 37px;
     margin: 5px auto;
-        display: block;
+    display: block;
     text-align: center;
 }
-.lblOC{
-    
+
+.lblOC {
     margin: 5px auto;
-        display: block;
+    display: block;
     text-align: center;
 }
 
@@ -97,9 +105,27 @@ devBody{
     background-image: url('/Content/Images/statusDeviceOn.png');
 }
 
+.switchOffHO {
+    background-image: url('/Content/Images/statusDeviceOff.png');
+    width: 90px;
+    height: 30px;
+    margin: 4px auto;
+    display: block;
+    text-align: center;
+}
+
+.switchOnHO {
+    width: 90px;
+    height: 30px;
+    margin: 4px auto;
+    display: block;
+    text-align: center;
+    background-image: url('/Content/Images/statusDeviceOn.png');
+}
+
 .switchOff {
-            background-image: url('/Content/Images/statusDeviceOff.png');
-            width: 90px;
+    background-image: url('/Content/Images/statusDeviceOff.png');
+    width: 90px;
     height: 30px;
     margin: 4px auto;
     display: block;
@@ -118,6 +144,20 @@ devBody{
     margin: 4px auto;
 }
 
+.leftBtHO {
+    background-image: url('/Content/Images/leftButton.png');
+    width: 28px;
+    height: 29px;
+    margin: 4px auto;
+}
+
+.rightBtHO {
+    background-image: url('/Content/Images/rightButton.png');
+    width: 28px;
+    height: 29px;
+    margin: 4px auto;
+}
+
 .switchOpen {
     width: 90px;
     height: 30px;
@@ -131,12 +171,29 @@ devBody{
     margin: 4px auto;
     text-align: center;
 }
+
 .reset {
     width: 115px;
     height: 33px;
     margin: 4px auto;
     padding: 4px;
 }
+
+.resetDustBag {
+    width: 115px;
+    height: 33px;
+    margin: 4px auto;
+    padding: 4px;
+    background-image: url('/Content/Images/Reset.png');
+}
+.resetAccum {
+    width: 115px;
+    height: 33px;
+    margin: 4px auto;
+    padding: 4px;
+    background-image: url('/Content/Images/Reset.png');
+}
+
 .btbQuick {
     width: 115px;
     height: 33px;
@@ -164,6 +221,7 @@ devBody{
     margin: 4px auto;
     padding: 4px;
 }
+
 .btbUseDev {
     width: 115px;
     height: 33px;
@@ -172,6 +230,16 @@ devBody{
     text-align: center;
     display: block;
 }
+.btbUseHO{
+     width: 115px;
+    height: 33px;
+    margin: 4px auto;
+    padding: 4px;
+    text-align: center;
+    display: block;
+        background-image: url('/Content/Images/UseDevice.png');
+}
+
 .btbDelete {
     width: 115px;
     height: 33px;
@@ -180,10 +248,11 @@ devBody{
     text-align: center;
     display: block;
 }
-#logo{
+
+#logo {
     width: 312px;
     height: 66px;
-        margin: 10px auto;
+    margin: 10px auto;
     padding: 4px;
     text-align: center;
     display: block;

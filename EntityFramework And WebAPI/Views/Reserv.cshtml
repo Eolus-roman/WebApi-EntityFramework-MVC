@@ -39,16 +39,20 @@
 
 
                         <p class="StrDev" id="status-@item.Id">@item.ToString()</p>
-
-                        @if (item is IHooverMark)
+                        @if (item.Status == false)
                         {
-                            <button type="button" class="switchOffHO" id="@item.Id" devtype="@item.Type"></button>
-                            <button type="button" class="switchOnHO" id="@item.Id" devtype="@item.Type"></button>
+                            if (item is IHooverMark)
+                            {
+                                <input type="button" class="switchOffHO" id="@item.Id" devtype="@item.Type" />
+                            }
+                            else
+                            {
+                                <a class="switchOff" href="/Home/Operation/@item.Type/@item.Id/on"><img src="~/Content/Images/statusDeviceOff.png" /></a>
+                            }
                         }
-                        else
+                        @if (item.Status == true)
                         {
-                            <a class="switchOff" href="/Home/Operation/@item.Type/@item.Id/off"><img src="~/Content/Images/statusDeviceOff.png" /></a>
-                            <a class="switchOn" href="/Home/Operation/@item.Type/@item.Id/on"><img src="~/Content/Images/statusDeviceOn.png" /></a>
+                            <a class="switchOn" href="/Home/Operation/@item.Type/@item.Id/off"><img src="~/Content/Images/statusDeviceOn.png" /></a>
                         }
 
                         @*=====================================*@
@@ -56,7 +60,7 @@
                         {
                             if (item is IHooverMark)
                             {
-                                <button type="button" class="leftBtHO" id="@item.Id" devtype="@item.Type"></button>
+                                <input type="button" class="leftBtHO" id="@item.Id" devtype="@item.Type" />
                             }
                             else
                             {
@@ -84,7 +88,7 @@
                             }
                             if (item is IHooverMark)
                             {
-                                <button type="button" class="rightBtHO" id="@item.Id" devtype="@item.Type"></button>
+                                <input type="button" class="rightBtHO" id="@item.Id" devtype="@item.Type" />
                             }
                             else
                             {
@@ -120,26 +124,22 @@
                             if (item is IBicycleMark)
                             {
                                 <label class="lbl">Reset Pulse</label>
-                                <a class="reset" href="/Home/Operation/@item.Type/@item.Id/rfp"><img src="~/Content/Images/Reset.png" /></a>
                             }
                             if (item is IHooverMark)
                             {
-                                <label class="lbl">Reset DustBag</label>
-                                <button type="button" class="resetDustBag" id="@item.Id" devtype="@item.Type"></button>
+                                <label class="lbl">Reset Pulse</label>
                             }
-
+                            <a class="reset" href="/Home/Operation/@item.Type/@item.Id/rfp"><img src="~/Content/Images/Reset.png" /></a>
                             <br />
                             if (item is IBicycleMark)
                             {
                                 <label class="lbl">Reset Speed</label>
-                                <a class="reset" href="/Home/Operation/@item.Type/@item.Id/rsp"><img src="~/Content/Images/Reset.png" /></a>
                             }
                             if (item is IHooverMark)
                             {
                                 <label class="lbl">Сharge Accumulator</label>
-                                <button type="button" class="resetAccum" id="@item.Id" devtype="@item.Type"></button>
-
                             }
+                            <a class="reset" href="/Home/Operation/@item.Type/@item.Id/rsp"><img src="~/Content/Images/Reset.png" /></a>
                             <br />
                         }
                         @*=====================================*@
@@ -155,14 +155,7 @@
                         @*=====================================*@
                         @if (item is IUse)
                         {
-                            if (item is IHooverMark)
-                            {
-                                <button type="button" class="btbUseHO" id="@item.Id" devtype="@item.Type"></button>
-                            }
-                            else
-                            {
-                                <a class="btbUseDev" href="/Home/Operation/@item.Type/@item.Id/app"><img src="~/Content/Images/UseDevice.png" /></a>
-                            }
+                            <a class="btbUseDev" href="/Home/Operation/@item.Type/@item.Id/app"><img src="~/Content/Images/UseDevice.png" /></a>
                         }
                         @*=====================================*@
                         <a class="btbDelete" href="/Home/Delete/@item.Type/@item.Id"><img src="~/Content/Images/Delete.png" /></a>
