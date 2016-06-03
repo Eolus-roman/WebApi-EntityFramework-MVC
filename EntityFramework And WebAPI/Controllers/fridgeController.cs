@@ -16,7 +16,7 @@ namespace EntityFramework_And_WebAPI.Controllers
     
         // PUT api/fridge/5
         [Route("api/fridge/{command}/{id}")]
-        public string Get(string command,  int id)
+        public string Put(string command,  int id)
         {
             Device dev = db.Fridges.Find(id);
             
