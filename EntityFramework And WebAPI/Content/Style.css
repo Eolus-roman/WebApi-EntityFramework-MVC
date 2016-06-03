@@ -59,7 +59,7 @@ devBody {
     margin-top: 10px;
     padding: 3px;
     width: 350px;
-    height: 420px;
+    height: 450px;
     background-image: url('/Content/Images/BackgrounDev.png');
     border-radius: 10px;
     -moz-border-radius: 10px;
@@ -247,6 +247,16 @@ devBody {
     padding: 4px;
     text-align: center;
     display: block;
+}
+.deleteHO{
+    width: 115px;
+    height: 33px;
+    margin: 4px auto;
+    padding: 4px;
+    text-align: center;
+    display: block;
+            background-image: url('/Content/Images/Delete.png');
+
 }
 
 #logo {

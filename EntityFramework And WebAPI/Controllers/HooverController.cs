@@ -21,6 +21,8 @@ namespace EntityFramework_And_WebAPI.Controllers
         {
             Device dev = db.Hoovers.Find(id);
             ce = (IChangeEnum)dev;
+            irs = (IResetSettings)dev;
+            iu = (IUse)dev;
             if (dev != null)
             {
                 switch (command)
@@ -55,6 +57,9 @@ namespace EntityFramework_And_WebAPI.Controllers
         // DELETE api/hoover/5
         public void Delete(int id)
         {
+            Device dev = db.Hoovers.Find(id);
+            db.Hoovers.Remove((Hoover)dev);
+            db.SaveChanges();
         }
         protected override void Dispose(bool disposing)
         {

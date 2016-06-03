@@ -50,7 +50,7 @@ namespace EntityFramework_And_WebAPI.Controllers
                     newDevice = Create.NewHoover();
                     db.Hoovers.Add((Hoover)newDevice);
                     break;
-                case "HO":
+                case "FR":
                     newDevice = Create.NewFridge();
                     db.Fridges.Add((Fridge)newDevice);
                     break;

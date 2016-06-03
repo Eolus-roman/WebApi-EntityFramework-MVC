@@ -14,8 +14,6 @@
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
     <link href="~/Content/Style.css" rel="stylesheet" />
-    <script src="~/Scripts/DevButt.js"></script>
-    <script src="~/Scripts/jquery-2.2.3.min.js"></script>
 </head>
 <body>
     <header>
@@ -33,7 +31,7 @@
             <div class="devicePanel" id="devicePanel">
                 @foreach (var item in Model)
                 {
-                    <div class="device-div" id="devicePanel">
+                    <div class="device-div" id="@item.Id-devicePanel">
 
                         <label class="NameDev">@item.Name</label>
 
@@ -42,8 +40,8 @@
 
                         @if (item is IHooverMark)
                         {
-                            <button type="button" class="switchOffHO" id="@item.Id" devtype="@item.Type"></button>
-                            <button type="button" class="switchOnHO" id="@item.Id" devtype="@item.Type"></button>
+                            <button type="button" class="switchOffHO" id="@item.Id"></button>
+                            <button type="button" class="switchOnHO" id="@item.Id"></button>
                         }
                         else
                         {
@@ -56,7 +54,7 @@
                         {
                             if (item is IHooverMark)
                             {
-                                <button type="button" class="leftBtHO" id="@item.Id" devtype="@item.Type"></button>
+                                <button type="button" class="leftBtHO" id="@item.Id"></button>
                             }
                             else
                             {
@@ -84,7 +82,7 @@
                             }
                             if (item is IHooverMark)
                             {
-                                <button type="button" class="rightBtHO" id="@item.Id" devtype="@item.Type"></button>
+                                <button type="button" class="rightBtHO" id="@item.Id"></button>
                             }
                             else
                             {
@@ -125,7 +123,7 @@
                             if (item is IHooverMark)
                             {
                                 <label class="lbl">Reset DustBag</label>
-                                <button type="button" class="resetDustBag" id="@item.Id" devtype="@item.Type"></button>
+                                <button type="button" class="resetDustBag" id="@item.Id"></button>
                             }
 
                             <br />
@@ -137,7 +135,7 @@
                             if (item is IHooverMark)
                             {
                                 <label class="lbl">Сharge Accumulator</label>
-                                <button type="button" class="resetAccum" id="@item.Id" devtype="@item.Type"></button>
+                                <button type="button" class="resetAccum" id="@item.Id"></button>
 
                             }
                             <br />
@@ -157,7 +155,7 @@
                         {
                             if (item is IHooverMark)
                             {
-                                <button type="button" class="btbUseHO" id="@item.Id" devtype="@item.Type"></button>
+                                <button type="button" class="btbUseHO" id="@item.Id"></button>
                             }
                             else
                             {
@@ -165,7 +163,14 @@
                             }
                         }
                         @*=====================================*@
-                        <a class="btbDelete" href="/Home/Delete/@item.Type/@item.Id"><img src="~/Content/Images/Delete.png" /></a>
+                        @if (item is IHooverMark)
+                        {
+                            <button type="button" class="deleteHO" id="@item.Id"></button>
+                        }
+                        else
+                        {
+                            <a class="btbDelete" href="/Home/Delete/@item.Type/@item.Id"><img src="~/Content/Images/Delete.png" /></a>
+                        }
 
                     </div>
 

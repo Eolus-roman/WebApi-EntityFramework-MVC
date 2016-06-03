@@ -3,6 +3,7 @@
     typeDev = $(this).attr('devtype');
     csscl = $(this).attr('class');
     event.preventDefault();
+
     if (csscl == "switchOnHO") {
         $.ajax({
             url: "/api/hoover/on/" + idDev,
@@ -35,8 +36,7 @@
                 $("#status-" + idDev).html(data);
             }
         });
-    }
-    else if (csscl == "resetDustBag") {
+    }    else if (csscl == "resetDustBag") {
         $.ajax({
             url: "/api/hoover/rfp/" + idDev,
             type: "PUT",
@@ -44,8 +44,7 @@
                 $("#status-" + idDev).html(data);
             }
         });
-    }
-    else if (csscl == "resetAccum") {
+    }    else if (csscl == "resetAccum") {
         $.ajax({
             url: "/api/hoover/rsp/" + idDev,
             type: "PUT",
@@ -60,6 +59,16 @@
             type: "PUT",
             success: function (data) {
                 $("#status-" + idDev).html(data);
+            }
+        });
+    }
+    else if (csscl = "deleteHO") {
+        $.ajax({
+            url: "/api/hoover/" + idDev,
+            type: "DELETE",
+            success: function (data) {
+                $("#" + idDev + "-devicePanel").remove();
+                
             }
         });
     }
